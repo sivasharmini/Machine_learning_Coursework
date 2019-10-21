@@ -1,0 +1,40 @@
+##### # Imports
+
+# Pandas and numpy for data manipulation
+import pandas as pd
+import numpy as np
+
+# No warnings about setting value on copy of slice
+pd.options.mode.chained_assignment = None
+
+# Display up to 60 columns of a dataframe
+pd.set_option('display.max_columns', 60)
+
+# Matplotlib visualization
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+# Set default font size
+plt.rcParams['font.size'] = 24
+
+# Internal ipython tool for setting figure size
+from IPython.core.pylabtools import figsize
+
+# Seaborn for visualization
+import seaborn as sns
+sns.set(font_scale = 2)
+
+# Splitting data into training and testing
+from sklearn.model_selection import train_test_split
+
+from sklearn.linear_model import LogisticRegression,LinearRegression
+
+# # # Data Cleaning and Formatting
+
+# # Load in the Data and Examine
+
+# Read in credit into a dataframe 
+credit = pd.read_csv('../input/my-dataset/credit_train.csv')
+
+# Display top of dataframe
+credit.head()
